@@ -1,0 +1,26 @@
+{
+  "name": "smith-ear",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AudioWorklet hammer-strike, modal-frequency and crack detection for knife forging",
+  "type": "module",
+  "scripts": {
+    "build:worklet": "node scripts/build-worklet.mjs",
+    "predev": "npm run build:worklet",
+    "dev": "vite --host 0.0.0.0",
+    "prebuild": "npm run build:worklet",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run validate",
+    "validate": "tsx scripts/validate.ts",
+    "validate:quick": "tsx scripts/validate.ts --quick"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.7",
+    "esbuild": "^0.24.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11"
+  }
+}
