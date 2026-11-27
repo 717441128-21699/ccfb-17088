@@ -16,3 +16,8 @@ node_modules/
 __pycache__/
 .venv/
 venv/
+
+# 构建产物（dist 与 worklet 打包结果均可由 npm 脚本再生）
+dist/
+node_modules/.cache/
+public/worklet/
